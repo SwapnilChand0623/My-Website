@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Swapnil Chand</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- 🎨 Sticker-style background with 80% center fill -->
+  <div class="background-overlay"></div>
+
+  <!-- 👤 Profile Header -->
+  <header class="profile-header">
+    <img src="1691877004687.jpg" alt="Swapnil Chand" class="profile-pic" />
+    <div class="intro-text">
+      <h1>👋 Hey! I'm <span>Swapnil</span></h1>
+      <p class="subtitle">🚀 Aspiring SWE | 🧠 Junior CS @ UTA | 💼 Intern-seeker & Lifelong Learner</p>
+    </div>
+  </header>
+
+  <!-- 📦 Interactive Summary -->
+  <section class="three-boxes">
+    <div class="box" onclick="toggleDetail('about-detail')">
+      <h2>🧑‍💻 About Me</h2>
+      <p class="preview">From 🇳🇵 to 🇺🇸, I’m chasing code & coffee ☕</p>
+      <div class="detail" id="about-detail">
+        <ul>
+          <li>🎓 CS Junior @ University of Texas at Arlington</li>
+          <li>💻 Coding in C, Python, JS</li>
+          <li>🌱 Learning DSA & Systems Programming</li>
+          <li>🌍 Nepal ➡️ Texas</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="box" onclick="toggleDetail('tech-detail')">
+      <h2>🛠️ Tech I Use</h2>
+      <p class="preview">🔧 Powered by C, Python, Git, and GDB wizardry 🧙‍♂️</p>
+      <div class="detail" id="tech-detail">
+        <ul>
+          <li><strong>Languages:</strong> C, Python, Java, JS, C++</li>
+          <li><strong>Tools:</strong> Git, VS Code, Linux, Valgrind</li>
+          <li><strong>Concepts:</strong> OOP, Hash Tables, DP</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="box" onclick="toggleDetail('focus-detail')">
+      <h2>🔥 Current Focus</h2>
+      <p class="preview">📈 Hustling with DSA & résumé wins 🧾</p>
+      <div class="detail" id="focus-detail">
+        <ul>
+          <li>📁 Uploading CS Projects</li>
+          <li>🧠 Solving Knapsack, Graphs, and DP problems</li>
+          <li>🎯 Prepping for Summer 2026 Internships</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 📁 Projects -->
+  <section class="projects">
+    <h2>📁 Projects</h2>
+    <div class="project-card">
+      <h3>📊 Stockiez</h3>
+      <p>A Flask API that predicts stock prices using LSTM models. Built with TensorFlow and Yahoo Finance integration for SPY, AAPL, MSFT, and NKE.</p>
+      <a class="btn" href="stockiez.html" target="_blank">View Project 🚀</a>
+    </div>
+  </section>
+
+  <!-- 📬 Contact -->
+  <section class="contact">
+    <h2>📬 Let’s Connect</h2>
+    <p>
+      <a href="mailto:sxc0623@mavs.uta.edu">📧 Email</a> |
+      <a href="https://github.com/SwapnilChand0623" target="_blank">🐙 GitHub</a> |
+      <a href="https://www.linkedin.com/in/swapnil-chand-806a2a288/" target="_blank">🌐 LinkedIn</a>
+    </p>
+    <form id="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <input type="tel" placeholder="Phone Number" />
+      <textarea placeholder="Your Message..." rows="3"></textarea>
+      <button type="submit">Send 📤</button>
+    </form>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

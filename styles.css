@@ -1,0 +1,285 @@
+/* 🧼 Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 🌅 Main Background */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #f2f2f2;
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.background-overlay {
+  position: fixed;
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  background-image: url('813299ae25682f46be44385781f1cdfd.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.15; /* You can adjust to 0.1–0.2 as you like */
+  border-radius: 16px;
+  z-index: 0;
+  pointer-events: none;
+  filter: brightness(1.2) contrast(1.2); /* Optional: boosts clarity */
+}
+
+
+
+/* 👋 Header */
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+  z-index: 1;
+  position: relative;
+}
+
+h1 span {
+  color: #00f7ff;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #ccc;
+}
+/* 👤 Profile Header Layout */
+.profile-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2rem 1rem;
+  text-align: left;
+  flex-wrap: wrap;
+  z-index: 1;
+  position: relative;
+}
+
+.profile-pic {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #00f7ff;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
+}
+
+.intro-text {
+  max-width: 500px;
+}
+
+.intro-text h1 span {
+  color: #00f7ff;
+}
+
+@media (max-width: 600px) {
+  .profile-header {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+/* 📦 Interactive Cards */
+.three-boxes {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  padding: 2rem;
+  z-index: 1;
+  position: relative;
+}
+
+.box {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  width: 280px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s;
+  cursor: pointer;
+  position: relative;
+}
+
+.box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
+}
+
+.preview {
+  font-style: italic;
+  color: #aaa;
+  margin: 0.5rem 0;
+}
+
+.detail {
+  display: none;
+  margin-top: 1rem;
+  animation: fadeIn 0.4s ease;
+}
+
+.detail.show {
+  display: block;
+}
+
+/* 🧠 Projects */
+.projects {
+  padding: 2rem;
+  text-align: center;
+  z-index: 1;
+  position: relative;
+}
+
+.project-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-left: 4px solid #00f7ff;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 8px;
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+/* 🔗 View Project Button */
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  background: #00f7ff;
+  color: #000;
+  padding: 0.7rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #00d3e0;
+}
+
+/* 💬 Contact */
+.contact {
+  padding: 2rem;
+  text-align: center;
+  z-index: 1;
+  position: relative;
+}
+
+form {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin-inline: auto;
+}
+
+form input, form textarea {
+  padding: 0.8rem;
+  margin: 0.4rem 0;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
+}
+
+form button {
+  background-color: #00f7ff;
+  color: #000;
+  padding: 0.8rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+form button:hover {
+  background-color: #00d3e0;
+}
+
+/* 🌐 Links */
+a {
+  color: #00f7ff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ✨ Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .three-boxes {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .box {
+    width: 90%;
+  }
+}
+.project-hero {
+  text-align: center;
+  padding: 3rem 1rem 1rem;
+  z-index: 1;
+  position: relative;
+}
+
+.project-hero h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-screenshot {
+  max-width: 700px;
+  width: 90%;
+  border-radius: 12px;
+  margin: 2rem auto;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+}
+
+.project-details {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  z-index: 1;
+  position: relative;
+}
+
+.project-details h2 {
+  margin-top: 2rem;
+  color: #00f7ff;
+}
+
+.project-details ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0.5rem 0 2rem;
+}
+
+.project-details ul li::before {
+  content: "🌟 ";
+  margin-right: 0.5rem;
+}
+
+.back-link {
+  text-align: center;
+  margin: 3rem 0 4rem;
+  z-index: 1;
+  position: relative;
+}
+
