@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Campus Roommate Finder – Mobile App</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .screenshots-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin: 30px 0;
+    }
+    .screenshots-grid img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease;
+      margin: 0 auto;
+      display: block;
+    }
+    .screenshots-grid img:hover {
+      transform: scale(1.05);
+    }
+    .project-details code {
+      background: rgba(255,255,255,0.1);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+    }
+    .project-details pre {
+      background: rgba(0,0,0,0.3);
+      padding: 15px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 15px 0;
+    }
+    .project-details pre code {
+      background: none;
+      padding: 0;
+    }
+    .architecture-flow {
+      background: rgba(255,255,255,0.05);
+      padding: 20px;
+      border-radius: 8px;
+      margin: 20px 0;
+      text-align: center;
+      font-family: monospace;
+      line-height: 1.8;
+    }
+    .tech-stack-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin: 20px 0;
+    }
+    .tech-category {
+      background: rgba(255,255,255,0.05);
+      padding: 15px;
+      border-radius: 8px;
+    }
+    .tech-category h4 {
+      margin: 0 0 10px 0;
+      color: #4CAF50;
+    }
+  </style>
+</head>
+<body>
+  <div class="background-overlay"></div>
+
+  <section class="project-hero">
+    <h1>🏠 Campus Roommate Finder</h1>
+    <p class="subtitle">A mobile app built with Flutter, Riverpod, and Supabase to help university students discover compatible roommates, chat in real time, and trade essentials via a marketplace.</p>
+    <img src="roommate-finder-main.png" alt="Campus Roommate Finder app screenshots" class="project-screenshot" />
+  </section>
+
+  <section class="project-details">
+    <h2>🧠 What is Campus Roommate Finder?</h2>
+    <p>
+      <strong>Campus Roommate Finder</strong> is a comprehensive mobile application designed specifically for university students to find compatible roommates through intelligent matching algorithms, communicate through real-time chat, and trade essential items via an integrated marketplace.
+    </p>
+
+    <h2>✨ Features</h2>
+    <ul>
+      <li><strong>🎓 Onboarding & University Selection:</strong> Select your university (validated by email domain) and complete a detailed roommate profile</li>
+      <li><strong>🤝 Compatibility-Based Matching:</strong> Uses profile data (interests, lifestyle, gender preferences, distance, housing) to compute match scores with ranked feed showing best matches first</li>
+      <li><strong>🔍 Filters & Favorites:</strong> Refine matches using filters (distance, housing, preferences, etc.) and save favorite profiles for quick access</li>
+      <li><strong>💬 Real-Time Chat:</strong> 1:1 messaging between matched users with conversations list, message history, and real-time notifications</li>
+      <li><strong>🛒 Marketplace:</strong> Create listings with photos, price, and details. Browse categories (furniture, textbooks, appliances) and message sellers directly</li>
+      <li><strong>🔔 Smart Notifications:</strong> Get notified of new matches, messages, and marketplace activity</li>
+    </ul>
+
+    <h2>📱 Screenshots</h2>
+    <div class="screenshots-grid">
+      <img src="https://github.com/user-attachments/assets/90d3d2cd-3acf-4050-94b4-b24d37e8774d" alt="App onboarding screen" />
+      <img src="https://github.com/user-attachments/assets/5771399a-670e-4671-8f76-9fe0ba85cff8" alt="Roommate matching interface" />
+      <img src="https://github.com/user-attachments/assets/7274a06f-aaae-4c21-92f8-5cb0532e74b5" alt="Real-time chat feature" />
+      <img src="https://github.com/user-attachments/assets/54fb7554-2431-4c33-9170-86bc27187104" alt="Marketplace listings" />
+      <img src="https://github.com/user-attachments/assets/dec1d294-05fa-45e1-bfce-f5ef46cd2699" alt="User profile management" />
+    </div>
+
+    <h2>🧱 Tech Stack</h2>
+    <div class="tech-stack-grid">
+      <div class="tech-category">
+        <h4>Frontend</h4>
+        <ul>
+          <li>Flutter 3.x (Dart)</li>
+          <li>Material 3 design</li>
+          <li>Riverpod for state management</li>
+        </ul>
+      </div>
+      <div class="tech-category">
+        <h4>Backend</h4>
+        <ul>
+          <li>Supabase (PostgreSQL)</li>
+          <li>Authentication & Storage</li>
+          <li>Real-time subscriptions</li>
+          <li>Row Level Security (RLS)</li>
+        </ul>
+      </div>
+      <div class="tech-category">
+        <h4>Key Packages</h4>
+        <ul>
+          <li><code>supabase_flutter</code></li>
+          <li><code>flutter_riverpod</code></li>
+          <li><code>flutter_local_notifications</code></li>
+          <li><code>cached_network_image</code></li>
+          <li><code>image_picker</code></li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>🚀 Getting Started</h2>
+    
+    <h3>Prerequisites</h3>
+    <ul>
+      <li>Flutter SDK installed</li>
+      <li>Dart SDK (included with Flutter)</li>
+      <li>Android Studio or Xcode (for device/emulator)</li>
+      <li>Supabase project (URL + anon/public key)</li>
+    </ul>
+
+    <h3>Installation</h3>
+    <pre><code># Clone the repository
+git clone https://github.com/SwapnilChand0623/Campus-Roommate.-Finder.git
+cd Campus-Roommate.-Finder
+
+# Install dependencies
+flutter pub get</code></pre>
+
+    <h3>Configuration</h3>
+    <p>Create a config file <code>lib/config/supabase_config.dart</code>:</p>
+    <pre><code>class SupabaseConfig {
+  static const String url = '&lt;YOUR_SUPABASE_URL&gt;';
+  static const String anonKey = '&lt;YOUR_SUPABASE_ANON_KEY&gt;';
+}</code></pre>
+
+    <h3>Database Setup</h3>
+    <ul>
+      <li>Run the provided SQL migrations in the Supabase SQL editor</li>
+      <li>Create storage buckets for profile photos and listings</li>
+      <li>Apply Row Level Security policies</li>
+    </ul>
+
+    <h3>Run the App</h3>
+    <pre><code>flutter run</code></pre>
+
+    <h2>📦 Building for Release</h2>
+    <p>To build a release APK for Android:</p>
+    <pre><code>flutter build apk --release</code></pre>
+    <p>Output will be available at: <code>build/app/outputs/flutter-apk/app-release.apk</code></p>
+
+    <h2>🏗️ Architecture</h2>
+    <div class="architecture-flow">
+      UI (Screens)<br>
+      ↓<br>
+      State (Riverpod Providers)<br>
+      ↓<br>
+      Services (business logic)<br>
+      ↓<br>
+      Supabase (Auth, DB, Storage, Realtime)
+    </div>
+
+    <h3>Core Services</h3>
+    <ul>
+      <li><strong>DatabaseService:</strong> Manages users, messages, and favorites</li>
+      <li><strong>MatchingService:</strong> Handles compatibility scoring and ranked matches</li>
+      <li><strong>ListingService:</strong> Marketplace CRUD operations and photo upload</li>
+      <li><strong>NotificationService:</strong> Local notifications and real-time listeners</li>
+    </ul>
+
+    <h2>🔐 Security & Privacy</h2>
+    <ul>
+      <li><strong>Row Level Security (RLS):</strong> Applied on all core tables</li>
+      <li><strong>Data Protection:</strong> Users can only access their own sensitive data and conversations</li>
+      <li><strong>Storage Policies:</strong> Restrict who can upload/delete images</li>
+      <li><strong>Email Validation:</strong> University email domain verification for authentic student accounts</li>
+    </ul>
+
+    <h2>📦 GitHub</h2>
+    <p>
+      <a href="https://github.com/SwapnilChand0623/Campus-Roommate.-Finder" class="btn" target="_blank">View Code on GitHub 🚀</a>
+    </p>
+
+    <h2>🔮 What's Next?</h2>
+    <ul>
+      <li>🌐 Web version for desktop users</li>
+      <li>🤖 AI-powered roommate recommendations</li>
+      <li>📊 Advanced analytics and insights</li>
+      <li>🎯 Enhanced matching algorithms</li>
+      <li>📱 iOS App Store deployment</li>
+      <li>🔔 Push notifications integration</li>
+    </ul>
+  </section>
+
+  <section class="back-link">
+    <a href="index.html" class="btn">← Back to Portfolio</a>
+  </section>
+</body>
+</html>
