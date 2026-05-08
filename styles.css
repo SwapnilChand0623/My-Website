@@ -548,6 +548,28 @@ h3 {
   background: linear-gradient(90deg, var(--blue), var(--gold));
 }
 
+.prep67-media {
+  display: grid;
+  gap: 14px;
+  align-content: center;
+}
+
+.prep67-media img {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 18px;
+  object-fit: cover;
+  box-shadow: 0 18px 55px rgba(0, 0, 0, 0.34);
+}
+
+.prep67-media img:first-child {
+  transform: translateX(-10px) rotate(-1.2deg);
+}
+
+.prep67-media img:last-child {
+  transform: translateX(18px) rotate(1.1deg);
+}
+
 .phone-media {
   display: flex;
   justify-content: center;
@@ -923,6 +945,10 @@ h3 {
   border: 1px solid var(--line);
   border-radius: 20px;
   box-shadow: var(--shadow);
+}
+
+.prep67-screenshots {
+  grid-template-columns: 1fr;
 }
 
 .architecture-flow,
