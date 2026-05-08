@@ -1,12 +1,13 @@
 document.querySelectorAll(".slide-title").forEach((title) => {
   const text = title.textContent.trim();
   title.textContent = "";
+  const words = text.split(" ");
 
-  text.split(" ").forEach((word, index) => {
+  words.forEach((word, index) => {
     const span = document.createElement("span");
     span.className = "line";
     span.style.transitionDelay = `${index * 34}ms`;
-    span.textContent = `${word}${index === text.split(" ").length - 1 ? "" : " "}`;
+    span.textContent = `${word}${index === words.length - 1 ? "" : " "}`;
     title.appendChild(span);
   });
 });
@@ -18,11 +19,12 @@ const observer = new IntersectionObserver(
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("in-view");
-        observer.unobserve(entry.target);
+      } else {
+        entry.target.classList.remove("in-view");
       }
     });
   },
-  { threshold: 0.18 }
+  { threshold: 0.2, rootMargin: "0px 0px -8% 0px" }
 );
 
 revealItems.forEach((item) => observer.observe(item));
@@ -35,10 +37,14 @@ document.querySelectorAll(".tilt-card").forEach((card) => {
     const rotateX = ((y / rect.height) - 0.5) * -8;
     const rotateY = ((x / rect.width) - 0.5) * 8;
 
-    card.style.transform = `perspective(1100px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px) scale(1.012)`;
+    card.style.setProperty("--mx", `${(x / rect.width) * 100}%`);
+    card.style.setProperty("--my", `${(y / rect.height) * 100}%`);
+    card.style.transform = `perspective(1100px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px) scale(1.014)`;
   });
 
   card.addEventListener("pointerleave", () => {
     card.style.transform = "perspective(1100px) rotateX(0deg) rotateY(0deg)";
+    card.style.removeProperty("--mx");
+    card.style.removeProperty("--my");
   });
 });
