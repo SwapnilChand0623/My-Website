@@ -1,3 +1,16 @@
+document.querySelectorAll(".slide-title").forEach((title) => {
+  const text = title.textContent.trim();
+  title.textContent = "";
+
+  text.split(" ").forEach((word, index) => {
+    const span = document.createElement("span");
+    span.className = "line";
+    span.style.transitionDelay = `${index * 34}ms`;
+    span.textContent = `${word}${index === text.split(" ").length - 1 ? "" : " "}`;
+    title.appendChild(span);
+  });
+});
+
 const revealItems = document.querySelectorAll(".reveal");
 
 const observer = new IntersectionObserver(
@@ -19,10 +32,10 @@ document.querySelectorAll(".tilt-card").forEach((card) => {
     const rect = card.getBoundingClientRect();
     const x = event.clientX - rect.left;
     const y = event.clientY - rect.top;
-    const rotateX = ((y / rect.height) - 0.5) * -4;
-    const rotateY = ((x / rect.width) - 0.5) * 4;
+    const rotateX = ((y / rect.height) - 0.5) * -8;
+    const rotateY = ((x / rect.width) - 0.5) * 8;
 
-    card.style.transform = `perspective(1100px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    card.style.transform = `perspective(1100px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px) scale(1.012)`;
   });
 
   card.addEventListener("pointerleave", () => {

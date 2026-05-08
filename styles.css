@@ -96,8 +96,10 @@ a {
 .nav-resume,
 .btn,
 .project-links a,
-.contact-links a {
-  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease, color 180ms ease;
+.contact-links a,
+.topbar nav a,
+.nav-actions a {
+  transition: transform 220ms ease, border-color 220ms ease, background 220ms ease, color 220ms ease, box-shadow 220ms ease;
 }
 
 .brand {
@@ -119,16 +121,25 @@ a {
   font-size: 0.82rem;
 }
 
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
 .topbar nav a,
-.nav-resume {
+.nav-actions a {
   padding: 10px 14px;
   border-radius: 999px;
 }
 
 .topbar nav a:hover,
-.nav-resume:hover {
+.nav-actions a:hover {
   background: rgba(255, 255, 255, 0.08);
   color: var(--text);
+  transform: translateY(-2px);
 }
 
 .nav-resume {
@@ -150,26 +161,37 @@ a {
 
 .hero-background {
   position: absolute;
-  inset: 38px -8vw auto;
-  height: 330px;
+  inset: 20px -10vw auto;
+  height: 420px;
   z-index: -1;
-  opacity: 0.16;
   overflow: hidden;
-  border-radius: 32px;
-  filter: saturate(0.85);
+  border-radius: 36px;
+  background:
+    linear-gradient(110deg, rgba(255,255,255,0.12), transparent 18%, transparent 82%, rgba(212,175,55,0.12)),
+    radial-gradient(circle at 22% 30%, rgba(10, 102, 194, 0.34), transparent 28rem),
+    radial-gradient(circle at 78% 20%, rgba(212, 175, 55, 0.2), transparent 24rem),
+    linear-gradient(135deg, rgba(18, 28, 43, 0.8), rgba(5, 7, 11, 0.5));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.08);
+}
+
+.hero-background::before {
+  content: "SWAPNIL CHAND";
+  position: absolute;
+  left: 18%;
+  top: 25%;
+  color: rgba(255,255,255,0.045);
+  font: 700 clamp(4rem, 10vw, 9rem) var(--display);
+  letter-spacing: 0.08em;
+  white-space: nowrap;
 }
 
 .hero-background::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(7, 10, 15, 0.05), var(--bg));
-}
-
-.hero-background img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  background:
+    repeating-linear-gradient(90deg, rgba(255,255,255,0.04) 0 1px, transparent 1px 120px),
+    linear-gradient(to bottom, transparent, var(--bg) 88%);
 }
 
 .hero-grid {
@@ -242,7 +264,8 @@ h3 {
 }
 
 .btn:hover {
-  transform: translateY(-2px);
+  transform: translateY(-5px) scale(1.025);
+  box-shadow: 0 20px 46px rgba(10, 102, 194, 0.28);
 }
 
 .btn.primary {
@@ -382,6 +405,12 @@ h3 {
   background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.035));
   box-shadow: var(--shadow);
   transform-style: preserve-3d;
+  transition: transform 260ms ease, border-color 260ms ease, box-shadow 260ms ease;
+}
+
+.project-card:hover {
+  border-color: rgba(101, 183, 255, 0.48);
+  box-shadow: 0 34px 110px rgba(10, 102, 194, 0.24), 0 22px 70px rgba(0, 0, 0, 0.44);
 }
 
 .feature-card {
@@ -402,7 +431,7 @@ h3 {
 .stockiez-media img {
   width: 100%;
   height: 100%;
-  min-height: 430px;
+  min-height: 320px;
   object-fit: cover;
   object-position: left top;
   border-radius: 20px;
@@ -461,6 +490,7 @@ h3 {
 .project-links a:hover {
   border-color: var(--gold);
   background: rgba(212, 175, 55, 0.1);
+  transform: translateY(-3px);
 }
 
 .concept-media {
@@ -532,6 +562,23 @@ h3 {
   border: 8px solid #05070b;
   border-radius: 26px;
   box-shadow: 0 24px 70px rgba(0, 0, 0, 0.36);
+}
+
+.feature-phone-media img {
+  width: min(31%, 190px);
+  transform: translateY(var(--lift, 0));
+}
+
+.feature-phone-media img:nth-child(1) {
+  --lift: 18px;
+}
+
+.feature-phone-media img:nth-child(2) {
+  --lift: -16px;
+}
+
+.feature-phone-media img:nth-child(3) {
+  --lift: 24px;
 }
 
 .stack-grid {
@@ -647,13 +694,30 @@ h3 {
 
 .reveal {
   opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 700ms ease, transform 700ms ease;
+  transform: translateY(34px) scale(0.985);
+  transition: opacity 820ms ease, transform 820ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .reveal.in-view {
   opacity: 1;
   transform: translateY(0);
+}
+
+.slide-title {
+  overflow: hidden;
+}
+
+.slide-title .line {
+  display: inline-block;
+  transform: translateX(-42px);
+  opacity: 0;
+  transition: transform 780ms cubic-bezier(0.16, 1, 0.3, 1), opacity 780ms ease;
+}
+
+.reveal.in-view .slide-title .line,
+.section-heading.in-view .slide-title .line {
+  transform: translateX(0);
+  opacity: 1;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -703,8 +767,13 @@ h3 {
     border-radius: 24px;
   }
 
-  .topbar nav {
+  .topbar nav,
+  .nav-actions a:not(.nav-resume) {
     display: none;
+  }
+
+  .nav-actions {
+    margin-left: auto;
   }
 
   .hero-actions {
@@ -746,10 +815,33 @@ h3 {
   z-index: -1;
   border-radius: 32px;
   background:
-    linear-gradient(rgba(7, 10, 15, 0.78), rgba(7, 10, 15, 0.92)),
-    url("assets/linkedin-banner.png") center / cover;
-  opacity: 0.42;
+    radial-gradient(circle at 20% 10%, rgba(10, 102, 194, 0.2), transparent 28rem),
+    radial-gradient(circle at 80% 0%, rgba(212, 175, 55, 0.12), transparent 22rem),
+    linear-gradient(rgba(7, 10, 15, 0.7), rgba(7, 10, 15, 0.9));
+  opacity: 0.9;
   pointer-events: none;
+}
+
+.case-back {
+  position: fixed;
+  top: 24px;
+  left: 24px;
+  z-index: 10;
+  padding: 11px 14px;
+  border: 1px solid rgba(212, 175, 55, 0.42);
+  border-radius: 999px;
+  background: rgba(7, 10, 15, 0.76);
+  color: var(--gold-soft);
+  font-size: 0.78rem;
+  font-weight: 600;
+  backdrop-filter: blur(18px);
+  transition: transform 220ms ease, background 220ms ease, border-color 220ms ease;
+}
+
+.case-back:hover {
+  transform: translateY(-3px);
+  border-color: var(--gold);
+  background: rgba(212, 175, 55, 0.1);
 }
 
 .project-hero {

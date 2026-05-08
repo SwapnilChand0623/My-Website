@@ -24,14 +24,17 @@
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </nav>
-      <a class="nav-resume" href="assets/SwapnilResume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+      <div class="nav-actions" aria-label="Social links">
+        <a href="https://github.com/SwapnilChand0623" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/swapnil-chand-806a2a288/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://www.instagram.com/__swapnil.x/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a class="nav-resume" href="assets/SwapnilResume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+      </div>
     </header>
 
     <main id="home">
       <section class="hero section-pad">
-        <div class="hero-background" aria-hidden="true">
-          <img src="assets/linkedin-banner.png" alt="" />
-        </div>
+        <div class="hero-background" aria-hidden="true"></div>
         <div class="hero-grid">
           <div class="hero-copy reveal">
             <p class="eyebrow">CS Junior @ UTA '27 / Full-Stack / Mobile / AI</p>
@@ -81,7 +84,7 @@
       <section class="section-pad intro-block reveal" id="about">
         <p class="eyebrow">Profile</p>
         <div class="split-heading">
-          <h2>From Nepal to Texas, building toward production-grade software.</h2>
+          <h2 class="slide-title">From Nepal to Texas, building toward production-grade software.</h2>
           <p>
             I am a CS student at The University of Texas at Arlington, sharpening my fundamentals through systems programming, data structures, applied AI, and product-driven builds. I care about clean interfaces, reliable backends, and projects that explain their value quickly.
           </p>
@@ -91,27 +94,29 @@
       <section class="section-pad work-section" id="work">
         <div class="section-heading reveal">
           <p class="eyebrow">Selected Work</p>
-          <h2>Three projects, three different product surfaces.</h2>
+          <h2 class="slide-title">Three projects, three different product surfaces.</h2>
         </div>
 
         <div class="project-grid">
           <article class="project-card feature-card reveal tilt-card">
-            <div class="project-media stockiez-media">
-              <img src="ss.png" alt="Stockiez dashboard screenshot" />
+            <div class="project-media phone-media feature-phone-media">
+              <img src="https://github.com/user-attachments/assets/90d3d2cd-3acf-4050-94b4-b24d37e8774d" alt="Campus Roommate Finder onboarding screen" />
+              <img src="https://github.com/user-attachments/assets/5771399a-670e-4671-8f76-9fe0ba85cff8" alt="Campus Roommate Finder matching screen" />
+              <img src="https://github.com/user-attachments/assets/7274a06f-aaae-4c21-92f8-5cb0532e74b5" alt="Campus Roommate Finder chat screen" />
             </div>
             <div class="project-content">
-              <span class="project-index">01 / AI Finance</span>
-              <h3>Stockiez</h3>
-              <p>A Flask and React stock prediction platform using LSTM models, TensorFlow, yfinance, and chart-driven recommendations for SPY, AAPL, MSFT, and NKE.</p>
+              <span class="project-index">01 / Mobile Marketplace</span>
+              <h3>Campus Roommate Finder</h3>
+              <p>A Flutter, Riverpod, and Supabase mobile app for roommate matching, real-time chat, favorites, and student marketplace workflows.</p>
               <div class="tag-row">
-                <span>Python</span>
-                <span>Flask</span>
-                <span>TensorFlow</span>
-                <span>React</span>
+                <span>Flutter</span>
+                <span>Riverpod</span>
+                <span>Supabase</span>
+                <span>Postgres</span>
               </div>
               <div class="project-links">
-                <a href="stockiez.html">Case Notes</a>
-                <a href="https://github.com/SwapnilChand0623/Stockiez" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="roommate-finder.html">Case Notes</a>
+                <a href="https://github.com/SwapnilChand0623/Campus-Roommate.-Finder" target="_blank" rel="noopener noreferrer">GitHub</a>
               </div>
             </div>
           </article>
@@ -149,23 +154,22 @@
           </article>
 
           <article class="project-card reveal tilt-card">
-            <div class="project-media phone-media">
-              <img src="https://github.com/user-attachments/assets/90d3d2cd-3acf-4050-94b4-b24d37e8774d" alt="Campus Roommate Finder onboarding screen" />
-              <img src="https://github.com/user-attachments/assets/5771399a-670e-4671-8f76-9fe0ba85cff8" alt="Campus Roommate Finder matching screen" />
+            <div class="project-media stockiez-media">
+              <img src="ss.png" alt="Stockiez dashboard screenshot" />
             </div>
             <div class="project-content">
-              <span class="project-index">03 / Mobile Marketplace</span>
-              <h3>Campus Roommate Finder</h3>
-              <p>A Flutter, Riverpod, and Supabase mobile app for roommate matching, real-time chat, favorites, and student marketplace workflows.</p>
+              <span class="project-index">03 / AI Finance</span>
+              <h3>Stockiez</h3>
+              <p>A Flask and React stock prediction platform using LSTM models, TensorFlow, yfinance, and chart-driven recommendations for SPY, AAPL, MSFT, and NKE.</p>
               <div class="tag-row">
-                <span>Flutter</span>
-                <span>Riverpod</span>
-                <span>Supabase</span>
-                <span>Postgres</span>
+                <span>Python</span>
+                <span>Flask</span>
+                <span>TensorFlow</span>
+                <span>React</span>
               </div>
               <div class="project-links">
-                <a href="roommate-finder.html">Case Notes</a>
-                <a href="https://github.com/SwapnilChand0623/Campus-Roommate.-Finder" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="stockiez.html">Case Notes</a>
+                <a href="https://github.com/SwapnilChand0623/Stockiez" target="_blank" rel="noopener noreferrer">GitHub</a>
               </div>
             </div>
           </article>
