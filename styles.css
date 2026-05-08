@@ -160,7 +160,7 @@ a {
 }
 
 .hero.section-pad {
-  padding: 46px 0 80px;
+  padding: 18px 0 80px;
 }
 
 .hero-background {
@@ -206,7 +206,7 @@ a {
 }
 
 .hero-copy {
-  padding-top: 68px;
+  padding-top: 44px;
 }
 
 .eyebrow {
@@ -296,6 +296,7 @@ h3 {
 .portrait-panel {
   position: relative;
   align-self: start;
+  margin-top: -8px;
 }
 
 .portrait-frame {
@@ -316,7 +317,8 @@ h3 {
 
 .portrait-frame img {
   width: 100%;
-  aspect-ratio: 4 / 4.75;
+  height: min(980px, calc(100vh - 170px));
+  min-height: 720px;
   object-fit: cover;
   object-position: center center;
 }
