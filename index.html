@@ -2,115 +2,249 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Swapnil Chand</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Swapnil Chand is a CS student at UTA building full-stack, mobile, and AI-powered software projects." />
+  <meta property="og:title" content="Swapnil Chand | Software Engineering Portfolio" />
+  <meta property="og:description" content="Full-stack and mobile developer focused on React, Flutter, Python, AI/ML, and practical software systems." />
+  <meta property="og:image" content="assets/linkedin-banner.png" />
+  <meta property="og:type" content="website" />
+  <title>Swapnil Chand | Software Engineering Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Background image overlay -->
-  <div class="background-overlay"></div>
+  <div class="site-shell">
+    <header class="topbar" aria-label="Primary navigation">
+      <a class="brand" href="#home" aria-label="Swapnil Chand home">SC</a>
+      <nav>
+        <a href="#work">Work</a>
+        <a href="#stack">Stack</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="nav-resume" href="assets/SwapnilResume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+    </header>
 
-  <!-- Profile Header -->
-  <header class="profile-header">
-    <img src="1691877004687.jpg" alt="Swapnil Chand" class="profile-pic" />
-    <div class="intro-text">
-      <h1>Hey, I'm <span>Swapnil</span></h1>
-      <p class="subtitle">Aspiring Software Engineer | Junior CS @ UTA | Seeking Software Engineering Internships</p>
-    </div>
-  </header>
+    <main id="home">
+      <section class="hero section-pad">
+        <div class="hero-background" aria-hidden="true">
+          <img src="assets/linkedin-banner.png" alt="" />
+        </div>
+        <div class="hero-grid">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">CS Junior @ UTA '27 / Full-Stack / Mobile / AI</p>
+            <h1>Full-stack software with cinematic polish.</h1>
+            <p class="hero-lede">
+              I am a software engineering candidate focused on React, Flutter, Python, AI/ML, REST APIs, and systems-minded product work.
+            </p>
+            <div class="hero-actions">
+              <a class="btn primary" href="#work">View Projects</a>
+              <a class="btn secondary" href="assets/SwapnilResume.pdf" target="_blank" rel="noopener noreferrer">Download Resume</a>
+              <a class="btn ghost" href="https://github.com/SwapnilChand0623" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+          </div>
 
-  <!-- Interactive Summary -->
-  <section class="three-boxes">
-    <div class="box" onclick="toggleDetail('about-detail')">
-      <h2>About Me</h2>
-      <p class="preview">Computer science student focused on building practical software.</p>
-      <div class="detail" id="about-detail">
-        <ul>
-          <li>CS Junior @ University of Texas at Arlington</li>
-          <li>Coding in C, Python, JavaScript, Java, and C++</li>
-          <li>Learning data structures, algorithms, and systems programming</li>
-          <li>Based in Texas, originally from Nepal</li>
-        </ul>
-      </div>
-    </div>
+          <aside class="portrait-panel reveal" aria-label="Profile summary">
+            <div class="portrait-frame">
+              <img src="assets/profile-portrait.jpeg" alt="Portrait of Swapnil Chand" />
+            </div>
+            <div class="availability-card">
+              <span>Seeking</span>
+              <strong>Software Engineering Internships</strong>
+              <small>Dallas-Fort Worth / Remote</small>
+            </div>
+          </aside>
+        </div>
+      </section>
 
-    <div class="box" onclick="toggleDetail('tech-detail')">
-      <h2>Tech I Use</h2>
-      <p class="preview">Comfortable with core programming, debugging, and web tooling.</p>
-      <div class="detail" id="tech-detail">
-        <ul>
-          <li><strong>Languages:</strong> C, Python, Java, JS, C++</li>
-          <li><strong>Tools:</strong> Git, VS Code, Linux, Valgrind</li>
-          <li><strong>Concepts:</strong> OOP, Hash Tables, DP</li>
-        </ul>
-      </div>
-    </div>
+      <section class="signal-strip reveal" aria-label="Portfolio highlights">
+        <div>
+          <span>01</span>
+          <strong>UTA Computer Science</strong>
+        </div>
+        <div>
+          <span>02</span>
+          <strong>React / Flutter / Python</strong>
+        </div>
+        <div>
+          <span>03</span>
+          <strong>AI + Full-Stack Projects</strong>
+        </div>
+        <div>
+          <span>04</span>
+          <strong>Internship Ready</strong>
+        </div>
+      </section>
 
-    <div class="box" onclick="toggleDetail('focus-detail')">
-      <h2>Current Focus</h2>
-      <p class="preview">Building stronger projects and preparing for technical interviews.</p>
-      <div class="detail" id="focus-detail">
-        <ul>
-          <li>Publishing CS projects with clear documentation</li>
-          <li>Practicing graph, dynamic programming, and systems problems</li>
-          <li>Preparing for Summer 2026 internships</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+      <section class="section-pad intro-block reveal" id="about">
+        <p class="eyebrow">Profile</p>
+        <div class="split-heading">
+          <h2>From Nepal to Texas, building toward production-grade software.</h2>
+          <p>
+            I am a CS student at The University of Texas at Arlington, sharpening my fundamentals through systems programming, data structures, applied AI, and product-driven builds. I care about clean interfaces, reliable backends, and projects that explain their value quickly.
+          </p>
+        </div>
+      </section>
 
-  <!-- Projects -->
-  <section class="projects">
-    <h2>Projects</h2>
-    <div class="project-card">
-      <h3>Stockiez</h3>
-      <p>A Flask API that predicts stock prices using LSTM models. Built with TensorFlow and Yahoo Finance integration for SPY, AAPL, MSFT, and NKE.</p>
-      <a class="btn" href="stockiez.html">View Project</a>
-    </div>
-    <div class="project-card">
-      <h3>Prep 67</h3>
-      <p>A browser-based mock interview coach that provides instant feedback on your delivery, body language, and answer structure using AI-powered analysis.</p>
-      <a class="btn" href="prep67.html">View Project</a>
-    </div>
-    <div class="project-card">
-      <h3>Campus Roommate Finder</h3>
-      <p>A mobile app built with Flutter, Riverpod, and Supabase to help university students discover compatible roommates, chat in real time, and trade essentials via a marketplace.</p>
-      <a class="btn" href="roommate-finder.html">View Project</a>
-    </div>
-  </section>
+      <section class="section-pad work-section" id="work">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Selected Work</p>
+          <h2>Three projects, three different product surfaces.</h2>
+        </div>
 
-  <!-- Contact -->
-  <section class="contact">
-    <h2>Let's Connect</h2>
-    <p>
-      <a href="mailto:sxc0623@mavs.uta.edu">Email</a> |
-      <a href="https://github.com/SwapnilChand0623" target="_blank" rel="noopener noreferrer">GitHub</a> |
-      <a href="https://www.linkedin.com/in/swapnil-chand-806a2a288/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-    </p>
-    <form id="contact-form" action="https://api.web3forms.com/submit/277212b1-a8cf-4ac0-a401-6e3688c08401" method="POST">
-      <input type="hidden" name="subject" value="New portfolio contact message" />
-      <input type="hidden" name="from_name" value="Swapnil Chand Portfolio" />
-      <input type="hidden" name="redirect" value="https://swapnilchand0623.github.io/My-Website/thank-you.html" />
-      <input type="checkbox" name="botcheck" class="hidden-field" tabindex="-1" autocomplete="off" />
-      <label>
-        <span>Your Name</span>
-        <input type="text" name="name" autocomplete="name" required />
-      </label>
-      <label>
-        <span>Your Email</span>
-        <input type="email" name="email" autocomplete="email" required />
-      </label>
-      <label>
-        <span>Phone Number</span>
-        <input type="tel" name="phone" autocomplete="tel" />
-      </label>
-      <label>
-        <span>Your Message</span>
-        <textarea name="message" rows="3" required></textarea>
-      </label>
-      <button type="submit">Send</button>
-    </form>
-  </section>
+        <div class="project-grid">
+          <article class="project-card feature-card reveal tilt-card">
+            <div class="project-media stockiez-media">
+              <img src="ss.png" alt="Stockiez dashboard screenshot" />
+            </div>
+            <div class="project-content">
+              <span class="project-index">01 / AI Finance</span>
+              <h3>Stockiez</h3>
+              <p>A Flask and React stock prediction platform using LSTM models, TensorFlow, yfinance, and chart-driven recommendations for SPY, AAPL, MSFT, and NKE.</p>
+              <div class="tag-row">
+                <span>Python</span>
+                <span>Flask</span>
+                <span>TensorFlow</span>
+                <span>React</span>
+              </div>
+              <div class="project-links">
+                <a href="stockiez.html">Case Notes</a>
+                <a href="https://github.com/SwapnilChand0623/Stockiez" target="_blank" rel="noopener noreferrer">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal tilt-card">
+            <div class="project-media concept-media">
+              <div class="mock-window">
+                <div class="window-bar"><span></span><span></span><span></span></div>
+                <div class="interview-grid">
+                  <div class="camera-box"></div>
+                  <div class="metric-stack">
+                    <span style="--w: 86%"></span>
+                    <span style="--w: 62%"></span>
+                    <span style="--w: 74%"></span>
+                    <span style="--w: 51%"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <span class="project-index">02 / AI Interview Coach</span>
+              <h3>Prep 67</h3>
+              <p>A browser-based interview preparation tool that analyzes speech, answer structure, pace, and delivery using Web APIs and structured feedback logic.</p>
+              <div class="tag-row">
+                <span>React</span>
+                <span>Vite</span>
+                <span>MediaPipe</span>
+                <span>Web Speech API</span>
+              </div>
+              <div class="project-links">
+                <a href="prep67.html">Case Notes</a>
+                <a href="https://github.com/SwapnilChand0623/Prep67" target="_blank" rel="noopener noreferrer">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal tilt-card">
+            <div class="project-media phone-media">
+              <img src="https://github.com/user-attachments/assets/90d3d2cd-3acf-4050-94b4-b24d37e8774d" alt="Campus Roommate Finder onboarding screen" />
+              <img src="https://github.com/user-attachments/assets/5771399a-670e-4671-8f76-9fe0ba85cff8" alt="Campus Roommate Finder matching screen" />
+            </div>
+            <div class="project-content">
+              <span class="project-index">03 / Mobile Marketplace</span>
+              <h3>Campus Roommate Finder</h3>
+              <p>A Flutter, Riverpod, and Supabase mobile app for roommate matching, real-time chat, favorites, and student marketplace workflows.</p>
+              <div class="tag-row">
+                <span>Flutter</span>
+                <span>Riverpod</span>
+                <span>Supabase</span>
+                <span>Postgres</span>
+              </div>
+              <div class="project-links">
+                <a href="roommate-finder.html">Case Notes</a>
+                <a href="https://github.com/SwapnilChand0623/Campus-Roommate.-Finder" target="_blank" rel="noopener noreferrer">GitHub</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-pad stack-section" id="stack">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Toolbox</p>
+          <h2>Focused on the stack behind modern product work.</h2>
+        </div>
+        <div class="stack-grid reveal">
+          <div>
+            <h3>Frontend</h3>
+            <p>React, Vite, JavaScript, HTML, CSS, Chart.js</p>
+          </div>
+          <div>
+            <h3>Backend</h3>
+            <p>Python, Flask, REST APIs, Node.js, SQL</p>
+          </div>
+          <div>
+            <h3>Mobile</h3>
+            <p>Flutter, Dart, Riverpod, mobile-first UX</p>
+          </div>
+          <div>
+            <h3>AI / Data</h3>
+            <p>TensorFlow, LSTM models, yfinance, applied analysis</p>
+          </div>
+          <div>
+            <h3>Systems</h3>
+            <p>C, C++, Java, Linux, GDB, Valgrind</p>
+          </div>
+          <div>
+            <h3>Workflow</h3>
+            <p>Git, GitHub, VS Code, debugging, documentation</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-pad contact-section" id="contact">
+        <div class="contact-copy reveal">
+          <p class="eyebrow">Contact</p>
+          <h2>Let’s build the next step.</h2>
+          <p>
+            I am currently looking for software engineering internship opportunities where I can contribute to product engineering, full-stack systems, mobile apps, or applied AI workflows.
+          </p>
+          <div class="contact-links">
+            <a href="mailto:sxc0623@mavs.uta.edu">sxc0623@mavs.uta.edu</a>
+            <a href="https://www.linkedin.com/in/swapnil-chand-806a2a288/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://github.com/SwapnilChand0623" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" id="contact-form" action="https://api.web3forms.com/submit/277212b1-a8cf-4ac0-a401-6e3688c08401" method="POST">
+          <input type="hidden" name="subject" value="New portfolio contact message" />
+          <input type="hidden" name="from_name" value="Swapnil Chand Portfolio" />
+          <input type="hidden" name="redirect" value="https://swapnilchand0623.github.io/My-Website/thank-you.html" />
+          <input type="checkbox" name="botcheck" class="hidden-field" tabindex="-1" autocomplete="off" />
+          <label>
+            <span>Your Name</span>
+            <input type="text" name="name" autocomplete="name" required />
+          </label>
+          <label>
+            <span>Your Email</span>
+            <input type="email" name="email" autocomplete="email" required />
+          </label>
+          <label>
+            <span>Phone Number</span>
+            <input type="tel" name="phone" autocomplete="tel" />
+          </label>
+          <label>
+            <span>Your Message</span>
+            <textarea name="message" rows="4" required></textarea>
+          </label>
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
+    </main>
+  </div>
 
   <script src="script.js"></script>
 </body>
