@@ -37,14 +37,10 @@ document.querySelectorAll(".tilt-card").forEach((card) => {
     const rotateX = ((y / rect.height) - 0.5) * -8;
     const rotateY = ((x / rect.width) - 0.5) * 8;
 
-    card.style.setProperty("--mx", `${(x / rect.width) * 100}%`);
-    card.style.setProperty("--my", `${(y / rect.height) * 100}%`);
-    card.style.transform = `perspective(1100px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px) scale(1.014)`;
+    card.style.transform = `perspective(1100px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px) scale(1.01)`;
   });
 
   card.addEventListener("pointerleave", () => {
     card.style.transform = "perspective(1100px) rotateX(0deg) rotateY(0deg)";
-    card.style.removeProperty("--mx");
-    card.style.removeProperty("--my");
   });
 });
