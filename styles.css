@@ -154,13 +154,13 @@ a {
 
 .hero {
   position: relative;
-  min-height: calc(100vh - 90px);
+  min-height: auto;
   display: grid;
   align-items: center;
 }
 
 .hero.section-pad {
-  padding: 64px 0 80px;
+  padding: 46px 0 80px;
 }
 
 .hero-background {
@@ -202,7 +202,11 @@ a {
   display: grid;
   grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
   gap: 64px;
-  align-items: center;
+  align-items: start;
+}
+
+.hero-copy {
+  padding-top: 68px;
 }
 
 .eyebrow {
@@ -291,6 +295,7 @@ h3 {
 
 .portrait-panel {
   position: relative;
+  align-self: start;
 }
 
 .portrait-frame {
@@ -777,6 +782,10 @@ h3 {
 
   .hero {
     min-height: auto;
+  }
+
+  .hero-copy {
+    padding-top: 16px;
   }
 
   .portrait-panel {
