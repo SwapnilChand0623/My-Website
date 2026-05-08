@@ -13,6 +13,7 @@ document.querySelectorAll(".slide-title").forEach((title) => {
 });
 
 const revealItems = document.querySelectorAll(".reveal");
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 const observer = new IntersectionObserver(
   (entries) => {
@@ -29,18 +30,14 @@ const observer = new IntersectionObserver(
 
 revealItems.forEach((item) => observer.observe(item));
 
-document.querySelectorAll(".tilt-card").forEach((card) => {
-  card.addEventListener("pointermove", (event) => {
-    const rect = card.getBoundingClientRect();
-    const x = event.clientX - rect.left;
-    const y = event.clientY - rect.top;
-    const rotateX = ((y / rect.height) - 0.5) * -8;
-    const rotateY = ((x / rect.width) - 0.5) * 8;
+if (!prefersReducedMotion) {
+  document.querySelectorAll(".tilt-card").forEach((card) => {
+    card.addEventListener("pointerenter", () => {
+      card.classList.add("is-hovered");
+    });
 
-    card.style.transform = `perspective(1100px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px) scale(1.01)`;
+    card.addEventListener("pointerleave", () => {
+      card.classList.remove("is-hovered");
+    });
   });
-
-  card.addEventListener("pointerleave", () => {
-    card.style.transform = "perspective(1100px) rotateX(0deg) rotateY(0deg)";
-  });
-});
+}

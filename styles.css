@@ -87,9 +87,8 @@ a {
   margin-top: 18px;
   border: 1px solid var(--line);
   border-radius: 999px;
-  background: rgba(7, 10, 15, 0.76);
-  backdrop-filter: blur(22px);
-  box-shadow: var(--shadow);
+  background: rgba(7, 10, 15, 0.94);
+  box-shadow: 0 18px 52px rgba(0, 0, 0, 0.32);
 }
 
 .brand,
@@ -269,8 +268,8 @@ h3 {
 }
 
 .btn:hover {
-  transform: translateY(-5px) scale(1.025);
-  box-shadow: 0 20px 46px rgba(10, 102, 194, 0.28);
+  transform: translateY(-4px) scale(1.018);
+  box-shadow: 0 14px 34px rgba(10, 102, 194, 0.2);
 }
 
 .btn.primary {
@@ -300,7 +299,7 @@ h3 {
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 30px;
   background: var(--panel);
-  box-shadow: var(--shadow);
+  box-shadow: 0 24px 62px rgba(0, 0, 0, 0.36);
 }
 
 .portrait-frame::after {
@@ -324,9 +323,8 @@ h3 {
   padding: 18px;
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 20px;
-  background: rgba(8, 13, 21, 0.86);
-  backdrop-filter: blur(18px);
-  box-shadow: var(--shadow);
+  background: rgba(8, 13, 21, 0.94);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.34);
 }
 
 .availability-card span,
@@ -408,14 +406,16 @@ h3 {
   border: 1px solid var(--line);
   border-radius: 28px;
   background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.035));
-  box-shadow: var(--shadow);
+  box-shadow: 0 22px 62px rgba(0, 0, 0, 0.34);
   transform-style: preserve-3d;
   transition: transform 260ms ease, border-color 260ms ease, box-shadow 260ms ease;
 }
 
-.project-card:hover {
+.project-card:hover,
+.project-card.is-hovered {
   border-color: rgba(101, 183, 255, 0.48);
-  box-shadow: 0 28px 80px rgba(10, 102, 194, 0.18), 0 18px 55px rgba(0, 0, 0, 0.38);
+  transform: translateY(-8px) scale(1.008);
+  box-shadow: 0 24px 68px rgba(10, 102, 194, 0.16), 0 18px 46px rgba(0, 0, 0, 0.34);
 }
 
 .feature-card {
@@ -441,7 +441,7 @@ h3 {
   object-fit: cover;
   object-position: left top;
   border-radius: 20px;
-  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.34);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.3);
 }
 
 .project-content {
@@ -567,7 +567,7 @@ h3 {
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 18px;
   object-fit: cover;
-  box-shadow: 0 18px 55px rgba(0, 0, 0, 0.34);
+  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.28);
 }
 
 .prep67-media img:first-child {
@@ -591,7 +591,7 @@ h3 {
   object-fit: cover;
   border: 8px solid #05070b;
   border-radius: 26px;
-  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.36);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.32);
 }
 
 .feature-phone-media img {
@@ -617,7 +617,6 @@ h3 {
   gap: 1px;
   overflow: hidden;
   border: 1px solid var(--line);
-  border-radius: 28px;
   background: var(--line);
 }
 
@@ -671,7 +670,7 @@ h3 {
   border: 1px solid var(--line);
   border-radius: 28px;
   background: rgba(255, 255, 255, 0.055);
-  box-shadow: var(--shadow);
+  box-shadow: 0 22px 58px rgba(0, 0, 0, 0.32);
 }
 
 .contact-form label {
@@ -724,15 +723,12 @@ h3 {
 
 .reveal {
   opacity: 0;
-  filter: blur(2px);
   transform: translateY(42px) scale(0.975);
-  transition: opacity 640ms ease, transform 640ms cubic-bezier(0.16, 1, 0.3, 1), filter 420ms ease;
-  will-change: opacity, transform, filter;
+  transition: opacity 560ms ease, transform 560ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .reveal.in-view {
   opacity: 1;
-  filter: blur(0);
   transform: translateY(0);
 }
 
@@ -746,7 +742,6 @@ h3 {
   opacity: 0;
   transform-origin: left bottom;
   transition: transform 760ms cubic-bezier(0.16, 1, 0.3, 1), opacity 760ms ease;
-  will-change: transform, opacity;
 }
 
 .reveal.in-view .slide-title .line,
@@ -869,7 +864,6 @@ h3 {
   color: var(--gold-soft);
   font-size: 0.78rem;
   font-weight: 600;
-  backdrop-filter: blur(18px);
   transition: transform 220ms ease, background 220ms ease, border-color 220ms ease;
 }
 
@@ -903,7 +897,7 @@ h3 {
   margin: 34px auto 0;
   border: 1px solid var(--line);
   border-radius: 24px;
-  box-shadow: var(--shadow);
+  box-shadow: 0 22px 58px rgba(0, 0, 0, 0.34);
 }
 
 .project-details {
@@ -957,7 +951,7 @@ h3 {
   width: 100%;
   border: 1px solid var(--line);
   border-radius: 20px;
-  box-shadow: var(--shadow);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.3);
 }
 
 .prep67-screenshots {
