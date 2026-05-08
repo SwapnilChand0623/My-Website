@@ -1,11 +1,11 @@
-/* 🧼 Base Reset */
+/* Base Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* 🌅 Main Background */
+/* Main Background */
 body {
   font-family: 'Segoe UI', sans-serif;
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
@@ -34,7 +34,7 @@ body {
 
 
 
-/* 👋 Header */
+/* Header */
 header {
   text-align: center;
   padding: 2rem 1rem;
@@ -50,7 +50,7 @@ h1 span {
   font-size: 1.1rem;
   color: #ccc;
 }
-/* 👤 Profile Header Layout */
+/* Profile Header Layout */
 .profile-header {
   display: flex;
   align-items: center;
@@ -88,7 +88,7 @@ h1 span {
 }
 
 
-/* 📦 Interactive Cards */
+/* Interactive Cards */
 .three-boxes {
   display: flex;
   justify-content: center;
@@ -131,7 +131,7 @@ h1 span {
   display: block;
 }
 
-/* 🧠 Projects */
+/* Projects */
 .projects {
   padding: 2rem;
   text-align: center;
@@ -149,7 +149,7 @@ h1 span {
   margin-inline: auto;
 }
 
-/* 🔗 View Project Button */
+/* View Project Button */
 .btn {
   display: inline-block;
   margin-top: 1rem;
@@ -166,7 +166,7 @@ h1 span {
   background: #00d3e0;
 }
 
-/* 💬 Contact */
+/* Contact */
 .contact {
   padding: 2rem;
   text-align: center;
@@ -205,7 +205,7 @@ form button:hover {
   background-color: #00d3e0;
 }
 
-/* 🌐 Links */
+/* Links */
 a {
   color: #00f7ff;
   text-decoration: none;
@@ -215,13 +215,13 @@ a:hover {
   text-decoration: underline;
 }
 
-/* ✨ Animations */
+/* Animations */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* 📱 Responsive */
+/* Responsive */
 @media (max-width: 768px) {
   .three-boxes {
     flex-direction: column;
@@ -271,15 +271,9 @@ a:hover {
   margin: 0.5rem 0 2rem;
 }
 
-.project-details ul li::before {
-  content: "🌟 ";
-  margin-right: 0.5rem;
-}
-
 .back-link {
   text-align: center;
   margin: 3rem 0 4rem;
   z-index: 1;
   position: relative;
 }
-
