@@ -108,10 +108,15 @@ a {
   height: 42px;
   place-items: center;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--blue), var(--gold));
-  color: #fff;
-  font-family: var(--display);
-  font-weight: 700;
+  overflow: hidden;
+  background: #07101d;
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.12), 0 10px 30px rgba(0,0,0,0.28);
+}
+
+.brand img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .topbar nav {
