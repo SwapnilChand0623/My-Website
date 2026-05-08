@@ -7,8 +7,12 @@ document.querySelectorAll(".slide-title").forEach((title) => {
     const span = document.createElement("span");
     span.className = "line";
     span.style.transitionDelay = `${index * 34}ms`;
-    span.textContent = `${word}${index === words.length - 1 ? "" : " "}`;
+    span.textContent = word;
     title.appendChild(span);
+
+    if (index < words.length - 1) {
+      title.appendChild(document.createTextNode(" "));
+    }
   });
 });
 
