@@ -165,8 +165,8 @@ a {
 
 .hero-background {
   position: absolute;
-  inset: 20px -10vw auto;
-  height: 420px;
+  inset: 0 -10vw auto;
+  height: 100%;
   z-index: -1;
   overflow: hidden;
   border-radius: 36px;
@@ -311,8 +311,9 @@ h3 {
 
 .portrait-frame img {
   width: 100%;
-  aspect-ratio: 4 / 4.75;
+  aspect-ratio: 4 / 3.8;
   object-fit: cover;
+  object-position: center 20%;
 }
 
 .availability-card {
