@@ -180,11 +180,24 @@ form {
   flex-direction: column;
   max-width: 400px;
   margin-inline: auto;
+  text-align: left;
+}
+
+form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin: 0.4rem 0;
+}
+
+form label span {
+  color: #d8f8fb;
+  font-size: 0.95rem;
+  font-weight: 600;
 }
 
 form input, form textarea {
   padding: 0.8rem;
-  margin: 0.4rem 0;
   border-radius: 6px;
   border: none;
   font-size: 1rem;
@@ -203,6 +216,10 @@ form button {
 
 form button:hover {
   background-color: #00d3e0;
+}
+
+.hidden-field {
+  display: none;
 }
 
 /* Links */
